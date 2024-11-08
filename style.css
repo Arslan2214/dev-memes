@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#image-modal {
+  display: none;
+}
+
+#image-modal:not(.hidden) {
+  display: flex;
+}

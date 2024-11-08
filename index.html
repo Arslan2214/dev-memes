@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This is a meme website that fetches memes from an API and allows users to share feedback."
+    />
+    <meta name="author" content="ARslan Ahmad" />
+    <meta name="keywords" content="meme, feedback, website" />
+    <link
+      type="image/png"
+      sizes="16x16"
+      rel="icon"
+      href="./public/web/icons8-funny-emoji-16.png"
+    />
+    <link
+      type="image/png"
+      sizes="32x32"
+      rel="icon"
+      href="./public/web/icons8-funny-emoji-32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>GSAP Playground</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+  </head>
+  <body
+    class="bg-gray-900 min-h-screen flex flex-col items-center justify-center"
+  >
+    <section
+      id="hero-section"
+      class="relative container mx-auto max-w-[1400px] py-10 md:py-24 px-10 min-h-screen"
+    >
+      <p
+        id="text"
+        class="flex flex-wrap gap-2 text-white leading-relaxed text-[2.5rem] md:text-[4rem] lg:text-[4.5rem] font-semibold text-shadow-lg drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
+      >
+        <span
+          class="[text-shadow:0_2px_4px_rgb(0_0_0_/_0.8)] hover:[text-shadow:none] word text-shadow-glow"
+          >Where</span
+        >
+        <span
+          class="[text-shadow:0_2px_4px_rgb(0_0_0_/_0.8)] hover:[text-shadow:none] word text-shadow-glow"
+          >bugs</span
+        >
+        🐛
+        <span
+          class="[text-shadow:0_2px_4px_rgb(0_0_0_/_0.8)] hover:[text-shadow:none] word text-shadow-glow"
+          >become</span
+        >
+        <span
+          class="[text-shadow:0_2px_4px_rgb(0_0_0_/_0.8)] hover:[text-shadow:none] word text-shadow-glow"
+          >features</span
+        >
+        ✨
+        <span
+          class="[text-shadow:0_2px_4px_rgb(0_0_0_/_0.8)] hover:[text-shadow:none] word text-shadow-glow"
+          >and</span
+        >
+        <span
+          class="[text-shadow:0_2px_4px_rgb(0_0_0_/_0.8)] hover:[text-shadow:none] word text-shadow-glow"
+          >coffee</span
+        >
+        ☕
+        <span
+          class="[text-shadow:0_2px_4px_rgb(0_0_0_/_0.8)] hover:[text-shadow:none] word text-shadow-glow"
+          >turns</span
+        >
+        <span
+          class="[text-shadow:0_2px_4px_rgb(0_0_0_/_0.8)] hover:[text-shadow:none] word text-shadow-glow"
+          >into</span
+        >
+        <span
+          class="[text-shadow:0_2px_4px_rgb(0_0_0_/_0.8)] hover:[text-shadow:none] word text-shadow-glow"
+          >code.</span
+        >
+        💻
+        <span
+          class="[text-shadow:0_2px_4px_rgb(0_0_0_/_0.8)] hover:[text-shadow:none] word text-shadow-glow"
+          >Welcome</span
+        >
+        👋
+        <span
+          class="[text-shadow:0_2px_4px_rgb(0_0_0_/_0.8)] hover:[text-shadow:none] word text-shadow-glow"
+          >to</span
+        >
+        <span
+          class="[text-shadow:0_2px_4px_rgb(0_0_0_/_0.8)] hover:[text-shadow:none] word text-shadow-glow"
+          >the</span
+        >
+        <span
+          class="[text-shadow:0_2px_4px_rgb(0_0_0_/_0.8)] hover:[text-shadow:none] word text-shadow-glow"
+          >developer's</span
+        >
+        👨‍💻
+        <span
+          class="[text-shadow:0_2px_4px_rgb(0_0_0_/_0.8)] hover:[text-shadow:none] word text-shadow-glow"
+          >meme</span
+        >
+        🎯
+        <span
+          class="[text-shadow:0_2px_4px_rgb(0_0_0_/_0.8)] hover:[text-shadow:none] word text-shadow-glow"
+          >paradise!</span
+        >
+        🌈
+      </p>
+      <img
+        id="tom_meme_pic_1"
+        class="img-scroll absolute bottom-[10%] right-[5%] w-32 sm:w-40 lg:w-48 xl:w-56 h-auto opacity-40 -z-10 hover:opacity-80 transition-opacity duration-300"
+        src="./public/img/tom(bg_rm).png"
+        alt="tom_meme_pic"
+      />
+      <img
+        id="tom_meme_pic_2"
+        class="img-scroll absolute top-[20%] left-[10%] w-32 sm:w-40 lg:w-48 xl:w-56 h-auto opacity-40 -z-10 hover:opacity-80 transition-opacity duration-300"
+        src="./public/img/meme_life.png"
+        alt="meme_life"
+      />
+      <img
+        id="tom_meme_pic_3"
+        class="img-scroll absolute top-[35%] right-[25%] w-32 sm:w-40 lg:w-48 xl:w-56 h-auto opacity-40 -z-10 hover:opacity-80 transition-opacity duration-300"
+        src="./public/img/meme_life_2.png"
+        alt="meme_life_2"
+      />
+      <img
+        id="tom_meme_pic_2"
+        class="img-scroll absolute top-[100%] left-[10%] w-32 sm:w-40 lg:w-48 xl:w-56 h-auto opacity-40 -z-10 hover:opacity-80 transition-opacity duration-300"
+        src="./public/img/meme_life_4.jpg"
+        alt="meme_life_4"
+      />
+      <img
+        id="tom_meme_pic_3"
+        class="img-scroll hidden sm:inline-block absolute top-[120%] right-[50%] w-32 sm:w-40 lg:w-48 xl:w-56 h-auto opacity-40 -z-10 hover:opacity-80 transition-opacity duration-300"
+        src="./public/img/meme_life_5.jpeg"
+        alt="meme_life_5"
+      />
+      <img
+        id="tom_meme_pic_3"
+        class="img-scroll hidden sm:inline-block absolute top-[105%] right-[18%] w-32 sm:w-40 lg:w-48 xl:w-56 h-auto opacity-40 -z-10 hover:opacity-80 transition-opacity duration-300"
+        src="./public/img/meme_life_6.jpg"
+        alt="meme_life_6"
+      />
+    </section>
+
+    <section
+      class="py-24 px-10 min-h-screen flex flex-col items-center justify-center"
+    >
+      <h2
+        class="text-white text-center text-4xl sm:text-xl border-b-2 border-white pb-10 font-semibold"
+      >
+        Memes
+      </h2>
+      <div
+        id="meme-section"
+        class="container mx-auto pt-[3vh] max-w-[1400px] columns-1 gap-4 sm:columns-2 md:columns-3 lg:columns-5"
+      >
+      </div>
+      <div class="flex justify-center mt-4">
+        <button
+          onclick="loadMoreMemes()"
+          class="border-2 border-white px-4 py-2 rounded-md text-white mx-2"
+        >
+          Load More Memes
+        </button>
+      </div>
+    </section>
+
+    <section>
+      <h2
+        class="text-white text-center text-4xl sm:text-4xl pb-10 font-semibold"
+      >
+        Share Feedback
+      </h2>
+      <form
+        id="feedback-form"
+        class="flex flex-col gap-4"
+        onsubmit="return sendEmail(event)"
+      >
+        <div class="flex flex-col gap-4">
+          <input
+            type="text"
+            name="from_name"
+            id="from_name"
+            placeholder="Your Name"
+            class="text-slate-300 bg-gray-800 p-2 rounded-md outline-none"
+            required
+          />
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Your Feedback"
+            class="text-slate-300 bg-gray-800 p-2 rounded-md outline-none resize-none h-40 w-[600px]"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="text-white bg-gray-800 p-2 rounded-md">
+          Share Feedback
+        </button>
+      </form>
+    </section>
+
+    <footer class="text-white text-center py-10">
+      <p>
+        Made with ❤️ by
+        <a
+          href="https://github.com/Arslan2214"
+          target="_blank"
+          class="font-semibold hover:underline underline-offset-4"
+          >ARslan Ahmad</a
+        >
+      </p>
+    </footer>
+    <div
+      id="image-modal"
+      class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center"
+    >
+      <div class="relative">
+        <button
+          id="close-modal"
+          class="absolute -top-3 -right-1 m-4 text-white [text-shadow:0_2px_4px_rgb(0_0_0_)] text-3xl"
+        >
+          &times;
+        </button>
+        <img
+          id="modal-image"
+          src=""
+          alt="Enlarged meme"
+          class="max-w-md max-h-md rounded-lg shadow-lg"
+        />
+      </div>
+    </div>
+
+    <script type="module" src="/animate.js"></script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
